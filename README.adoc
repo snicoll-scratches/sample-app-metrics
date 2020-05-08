@@ -1,0 +1,18 @@
+= Sample application with Micrometer metrics
+
+This sample project exposes a number of endpoints you could exercises to generate some
+traffic:
+
+* Get all speakers from the database: http://localhost:8080/speakers
+* Get a speaker by ID from the database: http://localhost:8080/speakers/1 (use a large number to trigger a `404`)
+* Get some random info retrieved from a remote service: http://localhost:8080/initializr-info
+
+This project configures the `LoggingMeterRegistry` that emits the metrics that are
+exported to the backend.
+
+== Running the app
+
+[indent=0]
+----
+	$ ./mvnw spring-boot:run
+----
